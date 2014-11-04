@@ -11,12 +11,12 @@ public class Solution {
         int count = 0;
         for(int i = 0; i < len; i++) {
             if(A[i] == elem) {
-                count++;
+                count++;    //counting the number of repeating elem
             }
             else if (count > 0) {
-                A[i - count] = A[i];
+                A[i - count] = A[i];    //shifting the bit to override to have inplace replace
             }
         }
-        return len - count;
+        return len - count; //return the new length
     }
 }
