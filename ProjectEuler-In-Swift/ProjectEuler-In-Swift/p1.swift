@@ -29,6 +29,6 @@ class Problem1 {
     func solution() -> String {
         var result = Int(sumofMultiplesUptoM(1000, divisor: 3) + sumofMultiplesUptoM(1000, divisor: 5) -
             sumofMultiplesUptoM(1000, divisor: 15))
-        return "Problem 1 solution: \(result)"
+        return "P1:Sum of Multiples of 3 and 5 is \(result)"
     }
 }

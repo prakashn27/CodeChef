@@ -17,7 +17,7 @@ class Problem2 {
     /* fib series :0 1 1 2 3 5 8 13 21 ..
      use modulu operator to find the minimum elements*/
     
-    func evenSum(range:Int) -> Int {
+    func evenSum(range:Int) -> String {
         var (a,b) = (0, 1)
         var sum = 0
         //println("a = \(a), b = \(b)")
@@ -27,7 +27,7 @@ class Problem2 {
             }
             (a, b) = (b, a+b)
         }
-        return sum
+        return "P2:EvenSum of \(range) is \(sum)"
     }
 
 }
