@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A8254835-2283-43C7-ACE8-4E25CC556F08</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ProjectEuler-In-Swift</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>13104E9E83F526FD9315EDABDF8D5DF46E5B9526</key>
+		<string>https://github.com/prakashn27/Online-judges.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ProjectEuler-In-Swift/ProjectEuler-In-Swift.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>13104E9E83F526FD9315EDABDF8D5DF46E5B9526</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/prakashn27/Online-judges.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>13104E9E83F526FD9315EDABDF8D5DF46E5B9526</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>13104E9E83F526FD9315EDABDF8D5DF46E5B9526</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Online-judges</string>
+		</dict>
+	</array>
+</dict>
+</plist>
