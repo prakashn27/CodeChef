@@ -101,3 +101,9 @@ DerivedData
 # Carthage/Checkouts
 
 Carthage/Build
+
+*.pbxproj
+
+ProjectEuler-In-Swift/ProjectEuler-In-Swift.xcodeproj/project.xcworkspace/xcuserdata/prakashn.xcuserdatad/UserInterfaceState.xcuserstate
+
+ProjectEuler-In-Swift/ProjectEuler-In-Swift.xcodeproj/project.pbxproj
