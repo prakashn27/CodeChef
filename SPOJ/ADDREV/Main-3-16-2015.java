@@ -20,9 +20,9 @@ class Main
 	{
 		Scanner in = new Scanner(System.in);
 		int t=in.nextInt();
-		in.readLine();	//skip the remainig part of the line
+		in.nextLine();	//skip the remainig part of the line
 		while(in.hasNext()) {
-			String nums = in.readLine();
+			String nums = in.nextLine();
 			String[] num = nums.split(" "); //seperated by space
 			int a = reverse(num[0]);
 			int b = reverse(num[1]);
