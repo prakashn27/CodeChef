@@ -26,7 +26,8 @@ _Output specification_
 For each test case, the output shall contain one line of the form "number + number = number". The line must represent the equation from that test case with all missing digits filled in.
 
 _Example_
-```
+
+````
 Input:
 3
 
@@ -40,5 +41,5 @@ Output:
 23 + 47 = 70
 3247 + 502 = 3749
 1613 + 75425 = 77038
-```
+````
 Note: int in C++/C/Java or longint in Pascal is enough.
