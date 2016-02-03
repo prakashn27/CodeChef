@@ -1,11 +1,9 @@
 import java.util.*;
 import java.lang.*;
 import java.math.BigInteger;
+public class FCTRL2 {
 
-class Main
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
+	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int t = in.nextInt();
 		in.nextLine();	//skip the remainig part of the line
