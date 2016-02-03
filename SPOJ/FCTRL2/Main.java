@@ -1,5 +1,6 @@
 import java.util.*;
 import java.lang.*;
+import java.math.BigInteger;
 
 class Main
 {
@@ -10,12 +11,11 @@ class Main
 		in.nextLine();	//skip the remainig part of the line
 		while(t-- > 0) {
 			int a = in.nextInt();
-			int res = 1;
+			BigInteger res = BigInteger.ONE;
 			for(int i = 1; i <= a; i++) {
-				res *= i;
+				res = res.multiply(BigInteger.valueOf(i));
 			}
-			//in.nextLine();
-			System.out.println(res);	//empty line
+			System.out.println(res);	
 		}
 	}
 }
