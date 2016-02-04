@@ -25,7 +25,7 @@ public class CANDY {
 				int avg = total / candies.length;
 				for(int i = 0; i < candies.length; i++) {
 					if(candies[i] < avg) {
-						res++;
+						res = res+ avg - candies[i];
 					}
 				}
 				System.out.println(res);
