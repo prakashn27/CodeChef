@@ -14,7 +14,7 @@ public class TOANDFRO {
 			int row = line.length() / col;
 			StringBuilder[] sb_arr = new StringBuilder[row];
 			Boolean reverse = false;
-			System.out.println("row :" + row + "/n col:" + col);
+//			System.out.println("row :" + row + "/n col:" + col);
 			for(int y = 0; y < row; y++) {
 				sb_arr[y] = new StringBuilder();
 				for(int x = 0; x < col; x++) {
