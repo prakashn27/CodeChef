@@ -8,20 +8,20 @@ public class LASTDIG {
 		in.nextLine();
 		int[] pattern = new int[5];
 		pattern[0] = 0;
+		
 		while(cnt-- > 0) {
 			int a = in.nextInt();
-			int b = in.nextInt();
+			long b = in.nextLong();
+			if(b == 0){System.out.println(1); continue;}
+            if(a == 0){System.out.println(0); continue;}
 			in.nextLine();
 			if(b == 1) {
 				System.out.println(a);
 				continue;
 			}
-			for(int i = 1; i <= 4; i++) {
-				pattern[i] = (int) (Math.pow(a,i)) % 10;
-				//System.out.println(a + "^" + i + " : " +  (Math.pow(a,i)) % 10);
-			}
-			int temp = b%4;
-			int res = pattern[temp];
+			b %= 4;
+			if(b == 0) b = 4;
+			int res = (int) Math.pow(a, b) % 10;
 			System.out.println(res);
 		}
 		in.close();
