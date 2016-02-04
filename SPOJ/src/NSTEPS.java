@@ -18,25 +18,26 @@ public class NSTEPS {
 			int t = in.nextInt();
 			in.nextLine();	
 			while(t-- > 0) {
-				int x = in.nextInt();
-				int y = in.nextInt();
+				int a = in.nextInt();
+				int b = in.nextInt();
 				in.nextLine();
-				if((x == y) || (x-2==y)){
-                    if(x%2 == 0){
-                        System.out.println(x+y);
-                    }
-                    else{
-                        System.out.println(x+y-1);
-                    }
-                }
-                else{
-                    System.out.println("No Number");
-                }
+				if((a == b) || (a - 2 == b)) {
+//					boolean a_even = a % 2 == 0;
+//					boolean b_even = b % 2 == 0;
+					if(a % 2 == 0) {
+						System.out.println(a+b);
+					} else {
+						System.out.println(a+b-1);
+					}	
+				} else {
+					System.out.println("No Number");
+				}
 			}
+			in.close();
 			
 		} catch(Exception e) {
 			
-		}
+		}	
 		
 
 	}
