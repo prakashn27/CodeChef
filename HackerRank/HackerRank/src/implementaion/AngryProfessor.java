@@ -20,12 +20,12 @@ public class AngryProfessor {
 					total_students_attending++;
 				}
 			}
-			in.nextLine();
 			if(total_students_attending >= k) {
-				System.out.println("YES");
-			} else {
 				System.out.println("NO");
+			} else {
+				System.out.println("YES");
 			}
+			in.nextLine();
 		}
 		in.close();
 
