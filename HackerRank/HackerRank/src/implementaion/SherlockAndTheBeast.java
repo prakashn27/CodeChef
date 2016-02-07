@@ -5,26 +5,34 @@ import java.util.Scanner;
 
 public class SherlockAndTheBeast {
 	
-	public static String getPerfectNumber(int val) {
-		if(val < 3) {
-			return "-1";
-		}
-		int ftemp = val;
-		while(ftemp % 3 != 0) {
-			ftemp -= 5;
-		}
-		if(ftemp % 3 != 0) return "-1";
-		StringBuilder sb = new StringBuilder();
-		int f = ftemp;
-		int t= val - f;
-		for(int i = 0; i < f; i++) {
-			sb.append("5");
-		}
-		for(int i = 0; i < t; i++) {
-			sb.append("3");
-		}
-		
-		return sb.toString();
+	public static void getPerfectNumber(int N) {
+		boolean flag=false;
+		int n5 = N/3;
+        int n3 = N-n5*3;
+        while(n5>0&&n3>0&&n3%5!=0){
+            n5--;
+            n3 = N-n5*3;
+
+        }
+        if(n3%5==0){
+            flag = true;
+        }
+        if(flag==false){
+            System.out.println("-1");
+        }
+        else{
+            //int n3 = (int) n3_d;
+            while(n5>0){
+                System.out.print("555");
+                n5--;
+            }
+            while(n3>0){
+                System.out.print("3");
+                n3--;
+            }
+            System.out.println();
+
+        }
 	}
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -32,8 +40,8 @@ public class SherlockAndTheBeast {
 		in.nextLine();
 		while(cnt-- > 0) {
 			int val = in.nextInt();
-			String result = getPerfectNumber(val);
-			System.out.println(result);
+			getPerfectNumber(val);
+//			System.out.println(result);
 		}
 		in.close();
 
