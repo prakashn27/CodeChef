@@ -9,7 +9,7 @@ public class SherlockAndTheBeast {
 		boolean flag=false;
 		int n5 = N/3;
         int n3 = N-n5*3;
-        while(n5>0&&n3>0&&n3%5!=0){
+        while(n5>0 && n3>0 && n3%5!=0){
             n5--;
             n3 = N-n5*3;
 
