@@ -111,5 +111,5 @@ ProjectEuler-In-Swift/ProjectEuler-In-Swift.xcodeproj/project.pbxproj
 
 # for topcoder
 
-topcoder/*.out
+Topcoder/*.out
 
