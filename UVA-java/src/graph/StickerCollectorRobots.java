@@ -1,5 +1,7 @@
 package graph;
-
+/*
+ * https://uva.onlinejudge.org/external/118/11831.pdf
+ */
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -56,9 +58,9 @@ public class StickerCollectorRobots {
 					default:
 						System.out.println("Operation " + ctemp + " is not defined.");
 					}
-					System.out.println(b);
+					//System.out.println(b);
 				}
-				System.out.println("Number of flags:" + b.flags);
+				System.out.println(b.flags);
 			}
 			in.close();
 		} catch(Exception e) {
@@ -82,6 +84,7 @@ class Bot {
 		this.x = x;
 		this.y = y;
 		this.dIndex = dindex;
+		flags = 0;
 	}
 	public void setBoundry(int n, int m) {
 		this.n = n;
@@ -101,14 +104,14 @@ class Bot {
 		switch(dIndex) {
 		case 0: //N
 			newPosition = x-1;
-			if(newPosition > 0 && arena[newPosition][y] != '#') {
+			if(newPosition >= 0 && arena[newPosition][y] != '#') {
 				if(arena[newPosition][y] == '*') {
 					flags++;
 					arena[newPosition][y] = '.';
 				}
 				x = newPosition;
 			} else {
-				System.out.println("N: invalid move or stall move..");
+				//System.out.println("N: invalid move or stall move..");
 			}
 			break;
 		case 1: //E
@@ -120,35 +123,35 @@ class Bot {
 				}
 				y = newPosition;
 			} else {
-				System.out.println("E: invalid move or stall move..");
+				//System.out.println("E: invalid move or stall move..");
 			}
 			break;
 		case 2: //S
 			newPosition = x+1;
-			if(newPosition > n && arena[newPosition][y] != '#') {
+			if(newPosition < n && (arena[newPosition][y] != '#')) {
 				if(arena[newPosition][y] == '*') {
 					flags++;
 					arena[newPosition][y] = '.';
 				}
 				x = newPosition;
 			} else {
-				System.out.println("S: invalid move or stall move..");
+				//System.out.println("S: invalid move or stall move..");
 			}
 			break;
 		case 3: //E
 			newPosition = y-1;
-			if(newPosition > 0 && arena[x][newPosition] != '#') {
+			if(newPosition >= 0 && arena[x][newPosition] != '#') {
 				if(arena[x][newPosition] == '*') {
 					flags++;
 					arena[x][newPosition] = '.';
 				}
 				y = newPosition;
 			} else {
-				System.out.println("E: invalid move or stall move..");
+				//System.out.println("E: invalid move or stall move..");
 			}
 			break;
 		default:
-			System.out.println("Invalid selection in F function");
+			//System.out.println("Invalid selection in F function");
 		}
 	}
 	
