@@ -64,11 +64,34 @@ public class KnightInWarGrid {
 			Stack<Position> s = new Stack<Position>();
 			s.push(new Position(0, 0));
 			while(!s.isEmpty()) {
-				Position temp = s.pop();
+				Position pTemp = s.pop();
 				// check out the posible moves for the temp;
 				// if it is valid and it is not water then push it into stack
 				// make sure to increment the count every time we go to path in the grid
+				x = pTemp.x;
+				y = pTemp.y; 
+				visited[x][y] = true;
+				for(Position p : possible_moves) {
+					int xx = x + p.x;
+					int yy = y + p.y;
+					if(xx >= 0 && xx < r && yy >= 0 && yy < c && !visited[xx][yy] && water[xx][yy] != 1) {
+						paths[x][y]++;
+						s.push(new Position(xx, yy));
+					}
+				}
 			}
+			int odd = 0, even = 0;
+			for(int i = 0; i < r; i++) {
+				for(int j = 0; j < c; j++) {
+					if(paths[i][j] % 2 == 1) {
+						odd++;
+					} else {
+						even++;
+					}
+				}
+			}
+			
+			System.out.println(case_number + " : " + even + " " + odd);
 		}
 		in.close();
 
