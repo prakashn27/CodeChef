@@ -1,33 +1,45 @@
+/*
+ http://www.spoj.com/problems/STPAR/
+*/
 #include <iostream>
 #include <stack>
+#include <queue>
+#include <algorithm>
 using namespace std;
  
 int main() {
 	int n, x, c;
-	stack<int> main_stack;
-	stack<int> side;
-	bool reordered;
+	std::queue<int> main;
+	std::stack<int> side;
 	cin >> n;
 	while(n != 0) {
 		c = 1;
-		for(int i = 0; i < n; i++) {
-			cin >> x;
-			main_stack.push(x);
+		main.push(0);
+		for(int i=0; i<n; i++) {
+			//cout << "i:" << i ;
+			cin>>x;
+			//cout << " x:" << x << endl;
+			main.push(x);
 		}
-
-		while(!main_stack.empty() || !side.empty())
+		while(!main.empty() || !side.empty())
 		{
-			if(!main_stack.empty() && main_stack.top() == c) {
-				main_stack.pop();
+			if(!main.empty() && main.front() == c) {
+				main.pop();
 				c++;
 			} 
-			else if(!side.empty() && side.top() == c) {
-				side.pop();
-				c++;
-			}
 			else {
-				side.push(main_stack.top());
-				main_stack.pop();
+				if(!side.empty() && side.top() == c) {
+					side.pop();
+					c++;
+				}
+				else {
+					if(!main.empty()) {
+						side.push(main.front());
+						main.pop();
+					} else {
+						break;
+					}
+				}
 			}
 		}
 		
