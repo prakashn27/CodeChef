@@ -113,3 +113,6 @@ ProjectEuler-In-Swift/ProjectEuler-In-Swift.xcodeproj/project.pbxproj
 
 Topcoder/*.out
 
+main.exe*
+*.exe
+*.out
