@@ -1,4 +1,4 @@
-*
+/*
  http://www.spoj.com/problems/STPAR/
 */
 #include <iostream>
