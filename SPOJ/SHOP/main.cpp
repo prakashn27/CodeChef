@@ -6,7 +6,7 @@
 #include <queue>
 #include <vector>
 #include <string>
-// #define DEBUG 1
+#define DEBUG 0
 using namespace std;
 
 
@@ -58,9 +58,6 @@ int main() {
 	while(w != 0 && h != 0) {
 		queue<Node> q;
 		char ch;
-		#ifdef DEBUG 
-			cout << h << " : " << w << endl;
-		#endif	
 		string row;
 		getline(cin, row);
 		vector<int> temp;
@@ -99,27 +96,23 @@ int main() {
 			grid.push_back(temp);
 			temp.clear();
 		}
-		print_vec(grid);
-		print_vec(dist_grid);
-		print_vec(is_visited);
+		// print_vec(grid);
+		// print_vec(dist_grid);
+		// print_vec(is_visited);
 
-		log_info("check and update the dist_grid for shortest path");
+		// log_info("check and update the dist_grid for shortest path");
 		q.push(s);
-		log_info("check all sides if valid update the dist_grid");
+		// log_info("check all sides if valid update the dist_grid");
 		while(!q.empty()) {
 			Node cur = q.front();
 			int x = cur.i;
 			int y = cur.j;
 			int cur_dist = dist_grid[x][y];
-			cout << "cur is ";
-			cur.print();
 			// check all 4 sides
 			if(x-1 >= 0) {
 				Node top(x-1, y);
 				int new_dist = grid[x-1][y];
 				if(cur_dist + new_dist < dist_grid[x-1][y] && !is_visited[x-1][y]) {
-					cout << "cur_dist " << cur_dist << " new_dist " << new_dist << " top is ";
-					top.print();
 					dist_grid[x-1][y] = cur_dist + new_dist;
 					q.push(top);
 				}
@@ -128,8 +121,6 @@ int main() {
 				Node bottom(x+1, y);
 				int new_dist = grid[x+1][y];
 				if(cur_dist + new_dist < dist_grid[x+1][y] && !is_visited[x+1][y]) {
-					cout << "cur_dist " << cur_dist << " new_dist " << new_dist << " bottom is ";
-					bottom.print();
 					dist_grid[x+1][y] = cur_dist + new_dist;
 					q.push(bottom);
 				}
@@ -137,10 +128,7 @@ int main() {
 			if(y-1 >= 0) {
 				Node left(x, y-1);
 				int new_dist = grid[x][y-1];
-				cout << "new dist in left is " << new_dist << ":" << cur_dist << ":" << dist_grid[x][y-1] << endl;
 				if(cur_dist + new_dist < dist_grid[x][y-1] && !is_visited[x][y-1]) {
-					cout << "cur_dist " << cur_dist << " new_dist " << new_dist << " left is ";
-					left.print();
 					dist_grid[x][y-1] = cur_dist + new_dist;
 					q.push(left);
 				}
@@ -150,8 +138,6 @@ int main() {
 				Node right(x, y+1);
 				int new_dist = grid[x][y+1];
 				if(cur_dist + new_dist < dist_grid[x][y+1] && !is_visited[x][y+1]) {
-					cout << "cur_dist " << cur_dist << " new_dist " << new_dist << " right is ";
-					right.print();
 					dist_grid[x][y+1] = cur_dist + new_dist;
 					q.push(right);
 				}
@@ -159,20 +145,21 @@ int main() {
 			q.pop();
 		}
 
-		log_info("dist_grid after computation");
-		print_vec(dist_grid);
-		log_info("##########");
-		print_vec(is_visited);
+		// log_info("dist_grid after computation");
+		// print_vec(dist_grid);
+		// log_info("##########");
+		// print_vec(is_visited);
 
-		log_info("#######");
-		cout << "result is " << dist_grid[d.i][d.j] << endl;
+		// log_info("#######");
+		cout << dist_grid[d.i][d.j] << endl;
 
 
-		log_info("clearing and freeing memory");
+		// log_info("clearing and freeing memory");
 		grid.clear();
 		dist_grid.clear();
-		s.print();
-		d.print();
+		is_visited.clear();
+		// s.print();
+		// d.print();
 		cin >> w;
 		cin >> h;
 	}
