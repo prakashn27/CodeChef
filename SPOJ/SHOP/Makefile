@@ -6,5 +6,9 @@ main.exe:
 clean:
 	rm main.exe
 
+debug:
+	g++ -DDEBUG main.cpp -o main.exe
+	./main.exe < test.input
+
 test: main.exe
 	./main.exe < test.input
