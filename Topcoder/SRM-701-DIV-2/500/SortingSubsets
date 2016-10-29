@@ -1,0 +1,30 @@
+#line 71 "SortingSubsets.cpp"
+#include <string>
+#include <vector>
+
+#include <ctime>
+#include <cmath>
+#include <string>
+#include <vector>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+class SortingSubsets {
+	public:
+	int getMinimalSize(vector <int> a) {
+		vector<int> b = a;
+		int cnt = 0;
+		sort(b.begin(), b.end());
+		for(int i = 0; i < a.size(); i++) {
+			if(a[i] != b[i]) cnt++;
+		}
+		return cnt;
+	}
+};
+
+
+
+// Powered by FileEdit
+// Powered by TesterDream 1.2.4 by fushar (December 19 2012)
+// Powered by CodeProcessor
