@@ -4,7 +4,7 @@
 
 Thanks to
 ```
-vim
+VimCoder
 testerdream
 CodeProcessor
 FileEdit
