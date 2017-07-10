@@ -119,5 +119,5 @@ main.exe*
 *.dSYM/
 
 driver.java
-Makefule
+Makefile
 testcases.txt
