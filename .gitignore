@@ -116,3 +116,8 @@ Topcoder/*.out
 main.exe*
 *.exe
 *.out
+*.dSYM/
+
+driver.java
+Makefule
+testcases.txt
