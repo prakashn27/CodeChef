@@ -123,3 +123,5 @@ main.exe*
 driver.java
 Makefile
 testcases.txt
+
+*.class
